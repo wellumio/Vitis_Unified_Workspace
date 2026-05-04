@@ -4,7 +4,7 @@
 		compatible = "simple-bus";
 		#address-cells = <2>;
 		#size-cells = <2>;
-		firmware-name = ".bin";
+		firmware-name = "chimera_main_1_wrapper.bit.bin";
 		axi_intc_0: axi_intc@a0020000 {
 			#interrupt-cells = <2>;
 			interrupts = < 0 89 4 >;

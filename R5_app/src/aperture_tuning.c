@@ -209,7 +209,7 @@ int atc_apply_preset_blocking(uint8_t preset_index)
             // return -4;
         }
 
-        // xil_printf("AT Control: %02x %02x %02x\r\n", (unsigned int)pl->bytes[0], (unsigned int)pl->bytes[1], (unsigned int)pl->bytes[2]);
+        xil_printf("AT Control: %02x %02x %02x\r\n", (unsigned int)pl->bytes[0], (unsigned int)pl->bytes[1], (unsigned int)pl->bytes[2]);
     }
     return 0;
 }

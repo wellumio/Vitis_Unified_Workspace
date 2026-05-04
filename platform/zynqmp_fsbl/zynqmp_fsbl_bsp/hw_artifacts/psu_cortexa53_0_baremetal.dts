@@ -2503,7 +2503,7 @@
                 compatible = "simple-bus";
                 #address-cells = <0x2>;
                 #size-cells = <0x2>;
-                firmware-name = ".bin";
+                firmware-name = "chimera_main_1_wrapper.bit.bin";
                 phandle = <0x10a>;
 
                 axi_intc_0: axi_intc@a0020000 {

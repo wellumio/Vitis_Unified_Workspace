@@ -345,8 +345,8 @@ int main(void)
         if (aperture_tuning_change_flag) {
             aperture_tuning_change_flag = 0;
             uint8_t p = pending_preset;
-            xil_printf("Aperture Tuning Change (%d)\r\n", p);
-            // atc_apply_preset_blocking(p);
+            xil_printf("Aperture Tuning Change ----- (%d)\r\n", p);
+            atc_apply_preset_blocking(p);
         }
         
         /* Pulse TUI Trigger input, not needed on initial set */
@@ -391,10 +391,12 @@ int main(void)
                 }
 
                 atc_precompute_sets(presets, NUM_PRESETS);
+                
+                xil_printf("Tuning presets computed\r\n");
 
                 pending_preset = 0;
                 pulse_tui_start_flag = 0;
-                // aperture_tuning_change_flag = 1;
+                aperture_tuning_change_flag = 1;
 
             }
             /* RX Tuning set change for Sequence Start, Triggers Tui 
